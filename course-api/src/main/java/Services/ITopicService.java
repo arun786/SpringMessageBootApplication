@@ -15,4 +15,6 @@ public interface ITopicService {
 
 	public List<Topics> getListOfTopics();
 
+	public Topics getATopic(String id);
+
 }
