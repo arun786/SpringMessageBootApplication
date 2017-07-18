@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "Controller" })
+@ComponentScan(basePackages = { "Controller", "Services"})
 public class Main {
 	public static void main(String[] args) {
 		SpringApplication.run(Main.class, args);
