@@ -18,5 +18,7 @@ public interface ITopicService {
 	public Topics getATopic(String id);
 	
 	public boolean addTopics(Topics topic);
+	
+	public void updateTopic(Topics topic, String id);
 
 }

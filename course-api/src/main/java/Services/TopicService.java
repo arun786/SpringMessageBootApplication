@@ -17,8 +17,9 @@ import Beans.Topics;
  */
 @Service
 public class TopicService implements ITopicService {
-	private List<Topics> lstTopics = new ArrayList<>(Arrays.asList(new Topics("1", "Spring framework Description", "Spring framework"),
-			new Topics("2", "java framework Description", "Java Language")));
+	private List<Topics> lstTopics = new ArrayList<>(
+			Arrays.asList(new Topics("1", "Spring framework Description", "Spring framework"),
+					new Topics("2", "java framework Description", "Java Language")));
 
 	@Override
 	public List<Topics> getListOfTopics() {
@@ -33,6 +34,16 @@ public class TopicService implements ITopicService {
 	@Override
 	public boolean addTopics(Topics topic) {
 		return lstTopics.add(topic);
+	}
+
+	@Override
+	public void updateTopic(Topics topic, String id) {
+		lstTopics.forEach((t) -> {
+			if (t.getId().equals(id)) {
+				t.setDescription(topic.getDescription());
+				t.setName(topic.getName());
+			}
+		});
 	}
 
 }
