@@ -16,5 +16,7 @@ public interface ITopicService {
 	public List<Topics> getListOfTopics();
 
 	public Topics getATopic(String id);
+	
+	public boolean addTopics(Topics topic);
 
 }
