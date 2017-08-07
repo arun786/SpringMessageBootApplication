@@ -20,5 +20,7 @@ public interface ITopicService {
 	public boolean addTopics(Topics topic);
 	
 	public void updateTopic(Topics topic, String id);
+	
+	public void deleteTopic(String id);
 
 }

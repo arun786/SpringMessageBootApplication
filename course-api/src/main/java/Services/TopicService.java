@@ -46,4 +46,11 @@ public class TopicService implements ITopicService {
 		});
 	}
 
+	@Override
+	public void deleteTopic(String id) {
+		
+		lstTopics.remove(id);
+		
+	}
+
 }
